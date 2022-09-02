@@ -1,9 +1,9 @@
 from flask import Flask
 app = Flask(__name__)
 
-# 일반적인 라우트 방식입니다.
 @app.route('/')
 def hello():
     return "<h3>Hello Helsinki!</h3>"
 
-app.run(host="localhost",port=7777)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", debug=True, port=7777)
